@@ -28,6 +28,8 @@ namespace VSCSeleniumAuto
             _driver.Manage().Window.Maximize();
             search("Mission Moon");
             Assert.True(_driver.Title.Contains("Mission Moon"));
+            Screenshot ss = ((ITakesScreenshot)_driver).GetScreenshot();
+            ss.SaveAsFile("D:\\Automation\\Image1.png", ScreenshotImageFormat.Png);
         }
 
         public void search(string searchtext)   

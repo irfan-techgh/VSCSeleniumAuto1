@@ -25,7 +25,7 @@ namespace VSCSeleniumAuto
         public void Screenshot()
         {
           _driver.Navigate().GoToUrl("https://www.freeimages.com/photo/eiffel-tower-4-1230689");
-          //  _driver.Manage().Window.Size = new Size(800, 800);
+          _driver.Manage().Window.Maximize();
           Thread.Sleep(3);
           Screenshot ss = ((ITakesScreenshot)_driver).GetScreenshot();
           ss.SaveAsFile("D:\\Automation\\Image.png", ScreenshotImageFormat.Png);
